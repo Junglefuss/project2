@@ -1,0 +1,82 @@
+[
+  {
+    "signUpDate": "2017-09-05",
+    "firstName": "Maggie",
+    "lastName": "Whittier",
+    "photo": "",
+    "approvedFor": ["writing", "content strategy"],
+    "skillsReported": ["copywriting", "content strategy"],
+    "yearsExperienceAsOfSignUp": 12,
+    "complementarySkills": ["design"],
+    "connections": {
+      "referredBy": "Jonathan Goldfuss",
+      "recommendedBy": ["Jonathan Goldfuss"],
+      "recommended": [],
+      "workersBidWith": [],
+      "clientsRepresented": ["Armature"],
+      "bidsRequested": [],
+      "projectsBidOn": [],
+      "projectsWorkedOn": []
+    },
+    "contactInfo": {
+      "email": ["maggie.michelle@gmail.com"],
+      "phoneNum": ["571-471-4006"],
+      "streetAddress": "",
+      "city": "Sterling",
+      "state": "VA",
+      "country": "USA",
+      "zip": 20166
+    },
+    "availability": "PTR",
+    "hourlyRate": 100,
+    "urls": {
+      "linkedIn": "https://www.linkedin.com/in/maggiewhittier/",
+      "portfolio": "",
+      "other": []
+    }
+  },
+  {
+    "signUpDate": "2017-09-05",
+    "firstName": "S. Rebecca",
+    "lastName": "Chanin",
+    "photo": "",
+    "approvedFor": ["Project Management", "Brand Strategy"],
+    "skillsReported": [
+      "marketing",
+      "strategy",
+      "social media",
+      "brand",
+      "project management",
+      "agency management",
+      "content development"
+    ],
+    "yearsExperienceAsOfSignUp": 28,
+    "complementarySkills": ["design", "programming", "research", "copywriting"],
+    "connections": {
+      "referredBy": "Jonathan Goldfuss",
+      "recommendedBy": ["Jonathan Goldfuss"],
+      "recommended": ["Craig Coughlin"],
+      "workersBidWith": ["Richard Taylor"],
+      "clientsRepresented": [],
+      "bidsRequested": [],
+      "projectsBidOn": [],
+      "projectsWorkedOn": []
+    },
+    "contactInfo": {
+      "email": ["rebachan@gmail.com"],
+      "phoneNum": ["703-447-1787"],
+      "streetAddress": "",
+      "city": "Sterling",
+      "state": "VA",
+      "country": "USA",
+      "zip": 22124
+    },
+    "availability": "PTI",
+    "hourlyRate": 150,
+    "urls": {
+      "linkedIn": "https://www.linkedin.com/in/rebeccachanin/",
+      "portfolio": "",
+      "other": []
+    }
+  }
+]
