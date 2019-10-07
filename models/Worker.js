@@ -27,7 +27,11 @@ const WorkerSchema = mongoose.Schema({
   },
   availability: String,
   hourlyRate: Number,
-  urls: []
+  urls: {
+    linkedIn: String,
+    portfolio: '',
+    other: []
+  }
 });
 
 module.exports = mongoose.model('Workers', WorkerSchema);
