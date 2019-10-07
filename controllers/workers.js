@@ -12,12 +12,18 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  res.render('index');
+  Worker.create(req.body).then(worker => {
+    res.redirect(`/id/${res.body._id}`);
+  });
 });
 
-// router.get('/id/:id', (req, res) => {
-//   Worker.findOne({ _id: req.params.id }).then(worker => res.json(worker));
-// });
+router.get('/id/:id', (req, res) => {
+  Worker.findOne({ _id: req.params.id }, req.body, { new: true })
+    // .then(worker => res.json(worker))
+    .then(worker => {
+      res.render('profile', { worker });
+    });
+});
 
 // router.get('/name/:name', (req, res) => {
 //   Worker.findOne({ name: req.params.name }).then(worker => res.json(worker));
