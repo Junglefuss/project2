@@ -3,20 +3,13 @@ const router = express.Router();
 
 const Worker = require('../models/Worker');
 
-// router.get('/', (req, res) => {
-//   Worker.find({}).then(workers => res.json(workers));
-// });
-
 router.get('/', (req, res) => {
   res.render('index');
 });
 
 router.post('/', (req, res) => {
   Worker.create(req.body).then(worker => {
-    // res.json(worker).then(worker => {
-    // console.log(res.body);
     res.redirect(`/id/${worker.id}`);
-    // });
   });
 });
 
@@ -40,22 +33,10 @@ router.put('/edit/:id', (req, res) => {
   });
 });
 
-// router.get('/name/:name', (req, res) => {
-//   Worker.findOne({ name: req.params.name }).then(worker => res.json(worker));
-// });
-
-// router.post('/new', (req, res) => {
-//   Worker.create(req.body).then(worker => res.json(worker));
-// });
-
-// router.put('/id/:id', (req, res) => {
-//   Worker.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }).then(worker =>
-//     res.json(worker)
-//   );
-// });
-
-// router.delete('/id/:id', (req, res) => {
-//   Worker.findOneAndDelete({ _id: req.params.id }).then(worker => res.json(worker));
-// });
+router.get('/delete/:id', (req, res) => {
+  Worker.findOneAndRemove({ _id: req.params.id }).then(restaurant => {
+    res.redirect('/');
+  });
+});
 
 module.exports = router;

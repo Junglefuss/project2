@@ -2,25 +2,18 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 
-/* header */
 .header {
-  /* margin: 20px 10px; */
   display: flex;
   align-items: center;
 }
 
 .header > a > img {
   width: 225px;
-  /* float: left; */
   align-content: flex-start;
 }
 
 .header > .nav {
-  /* float: right; */
   justify-content: right;
-  /* flex-flow: row wrap; */
-  /* text-align: center; */
-  /* margin: 12px 5px 0 0; */
   padding: 12px;
   text-decoration: none;
   font-size: 14px;
@@ -29,12 +22,10 @@ body {
   color: rgb(69, 191, 180);
 }
 
-/* body */
 main {
   align-content: center;
   margin: 0 20px 0 20px;
   color: rgb(125, 127, 128);
-  /* display: flex; */
 }
 
 .intro {
