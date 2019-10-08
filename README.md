@@ -2,7 +2,7 @@
 
 A sign-up form, including edit and delete functions, for the worker database of Coproductions.com, a resource for marketing pros to find services
 
-![Sign Up in action](../Copro_sign-up_screenshot.png)
+![Sign Up in action](./public/images/Copro_sign-up_screenshot.png)
 
 ## Getting Started
 
