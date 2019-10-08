@@ -1,105 +1,111 @@
-<body>
-    <div class="header">
-        {{!-- <div class="logo"> --}}
-        <a href="http://coproductions.com>">
-            <img src="../images/coproductions_logo.png" alt="Coproductions logo" />
-        </a>
-        {{!-- </div> --}}
+{{!-- <body> --}}
+<div class="header">
+    {{!-- <div class="logo"> --}}
+    <a href="http://coproductions.com>">
+        <img src="../images/coproductions_logo.png" alt="Coproductions logo" />
+    </a>
+    {{!-- </div> --}}
 
-        <a class="nav" href=" https://www.coproductions.com/">Home</a>
-        <a class="nav" href="https://www.coproductions.com/start-your-project/">Start Your Project</a>
-        <a class="nav" href="/">Sign Up</a>
-        <a class="nav" href="https://www.coproductions.com/about/">About</a>
-        <a class="nav" href="https://www.coproductions.com/faq/">FAQ</a>
-        <a class="nav" href="https://www.coproductions.com/contact-us/">Contact Us</a>
+    <a class="nav" href=" https://www.coproductions.com/">Home</a>
+    <a class="nav" href="https://www.coproductions.com/start-your-project/">Start Your Project</a>
+    <a class="nav" href="/">Sign Up</a>
+    <a class="nav" href="https://www.coproductions.com/about/">About</a>
+    <a class="nav" href="https://www.coproductions.com/faq/">FAQ</a>
+    <a class="nav" href="https://www.coproductions.com/contact-us/">Contact Us</a>
 
+</div>
+<main>
+    <div class="intro">
+        <h1>Edit Your Profile</h1>
+        <p>
+            You can adjust the information in your profile by making your changes in the fields below and clicking
+            "Update."</p>
     </div>
-    <main>
-        <div class="intro">
-            <h1>Edit Your Profile</h1>
-            <p>
-                You can adjust the information in your profile by making your changes in the fields below and clicking
-                "Update."</p>
-        </div>
 
-        <div class="form container">
+    <div class="form container">
 
-            <form action="/edit/{{worker.id}}?_method=put" method="POST" accept-charset="utf-8">
-                <div>
-                    <label for="firstName">First Name:</label>
-                    <input type="text" name="firstName" value="{{worker.firstName}}">
+        <form action="/edit/{{worker.id}}?_method=put" method="POST" accept-charset="utf-8">
+            <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" value="{{worker.firstName}}">
 
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" name="lastName" value="{{worker.lastName}}">
-                </div>
-                <div>
-                    <label for="photo">Profile photo (link):</label>
-                    <input type="text" name="photo">
-                </div>
-                <div>
-                    <label for="skillsReported">Your professional skills:</label>
-                    <input type="text" name="skillsReported" value="{{worker.skillsReported}}">
-                </div>
-                <div>
-                    <label for="yearsExperienceAsOfSignUp">Years of experience:</label>
-                    <input type="number" name="yearsExperienceAsOfSignUp" value="{{worker.yearsExperienceAsOfSignUp}}">
-                </div>
-                <div>
-                    <label for="complementarySkills">Professional skills that complement your own:</label>
-                    <input type="text" name="complementarySkills" value="{{worker.complementarySkills}}">
-                </div>
-                <div>
-                    <label for="connections.referredBy">Who referred you to Coproductions?:</label>
-                    <input type="text" name="connections.referredBy" value="{{worker.connections.referredBy}}">
-                </div>
-                <div>
-                    <label for="connections.recommended">Can you recommend other agencies or freelancers you would work
-                        with?:</label>
-                    <input type="text" name="connections.recommended" value="{{worker.connections.recommended}}">
-                </div>
-                <div>
-                    <label for="contactInfo.email">Your Email(s):</label>
-                    <input type="text" name="contactInfo.email" value="{{worker.contactInfo.email}}">
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" value="{{worker.lastName}}">
+            </div>
+            <div>
+                <label for="photo">Profile photo (link):</label>
+                <input type="text" name="photo" id="photo">
+            </div>
+            <div>
+                <label for="skillsReported">Your professional skills:</label>
+                <input type="text" name="skillsReported" id="skillsReported" value="{{worker.skillsReported}}">
+            </div>
+            <div>
+                <label for="yearsExperienceAsOfSignUp">Years of experience:</label>
+                <input type="number" name="yearsExperienceAsOfSignUp" id="yearsExperienceAsOfSignUp"
+                    value="{{worker.yearsExperienceAsOfSignUp}}">
+            </div>
+            <div>
+                <label for="complementarySkills">Professional skills that complement your own:</label>
+                <input type="text" name="complementarySkills" id="complementarySkills"
+                    value="{{worker.complementarySkills}}">
+            </div>
+            <div>
+                <label for="connections.referredBy">Who referred you to Coproductions?:</label>
+                <input type="text" name="connections.referredBy" id="connections.referredBy"
+                    value="{{worker.connections.referredBy}}">
+            </div>
+            <div>
+                <label for="connections.recommended">Can you recommend other agencies or freelancers you would work
+                    with?:</label>
+                <input type="text" name="connections.recommended" idname="connections.recommended"
+                    value="{{worker.connections.recommended}}">
+            </div>
+            <div>
+                <label for="contactInfo.email">Your Email(s):</label>
+                <input type="text" name="contactInfo.email" id="contactInfo.email" value="{{worker.contactInfo.email}}">
 
-                    <label for="contactInfo.phoneNum">Your Phone Number(s):</label>
-                    <input type="text" name="contactInfo.phoneNum" value="{{worker.contactInfo.phoneNum}}">
-                </div>
-                <div>
-                    <label for="contactInfo.streetAddress">Your Street Address (mailing):</label>
-                    <input type="text" name="contactInfo.streetAddress" value="{{worker.contactInfo.streetAddress}}">
+                <label for="contactInfo.phoneNum">Your Phone Number(s):</label>
+                <input type="text" name="contactInfo.phoneNum" id="contactInfo.phoneNum"
+                    value="{{worker.contactInfo.phoneNum}}">
+            </div>
+            <div>
+                <label for="contactInfo.streetAddress">Your Street Address (mailing):</label>
+                <input type="text" name="contactInfo.streetAddress" id="contactInfo.streetAddress"
+                    value="{{worker.contactInfo.streetAddress}}">
 
-                    <label for="contactInfo.city">Your City:</label>
-                    <input type="text" name="contactInfo.city" value="{{worker.contactInfo.city}}">
+                <label for="contactInfo.city">Your City:</label>
+                <input type="text" name="contactInfo.city" id="contactInfo.city" value="{{worker.contactInfo.city}}">
 
-                    <label for="contactInfo.state">Your State:</label>
-                    <input type="text" name="contactInfo.state" value="{{worker.contactInfo.state}}">
+                <label for="contactInfo.state">Your State:</label>
+                <input type="text" name="contactInfo.state" id="contactInfo.state" value="{{worker.contactInfo.state}}">
 
-                    <label for="contactInfo.zip">Your Zip:</label>
-                    <input type="text" name="contactInfo.zip" value="{{worker.contactInfo.zip}}">
-                </div>
-                <div>
-                    <label for="availability">Your Availability:</label>
-                    <input type="text" name="availability" value="{{worker.availability}}">
+                <label for="contactInfo.zip">Your Zip:</label>
+                <input type="text" name="contactInfo.zip" id="contactInfo.zip" value="{{worker.contactInfo.zip}}">
+            </div>
+            <div>
+                <label for="availability">Your Availability:</label>
+                <input type="text" name="availability" id="availability" value="{{worker.availability}}">
 
-                    <label for="hourlyRate">Your standard hourly rate:</label>
-                    <input type="text" name="hourlyRate" value="{{worker.hourlyRate}}">
-                </div>
-                <div>
-                    <label for="urls.linkedIn">Your LinkedIn profile link:</label>
-                    <input type="text" name="urls.linkedIn" value="{{worker.urls.linkedIn}}">
-                </div>
-                <div>
-                    <label for="urls.portfolio">Your portfolio link:</label>
-                    <input type="text" name="urls.portfolio" value="{{worker.urls.portfolio}}">
-                </div>
-                <div>
-                    <label for="urls.other">Any other links demonstrating your skills or experience:</label>
-                    <input type="text" name="urls.other" value="{{worker.urls.other}}">
-                </div>
+                <label for="hourlyRate">Your standard hourly rate:</label>
+                <input type="text" name="hourlyRate" idname="hourlyRate" value="{{worker.hourlyRate}}">
+            </div>
+            <div>
+                <label for="urls.linkedIn">Your LinkedIn profile link:</label>
+                <input type="text" name="urls.linkedIn" id="urls.linkedIn" value="{{worker.urls.linkedIn}}">
+            </div>
+            <div>
+                <label for="urls.portfolio">Your portfolio link:</label>
+                <input type="text" name="urls.portfolio" id="urls.portfolio" value="{{worker.urls.portfolio}}">
+            </div>
+            <div>
+                <label for="urls.other">Any other links demonstrating your skills or experience:</label>
+                <input type="text" name="urls.other" id="urls.other" value="{{worker.urls.other}}">
+            </div>
 
-                <input type="submit" value="Update">
-            </form>
-        </div>
+            <input type="submit" value="Update">
+        </form>
+    </div>
 
-    </main>
-</body>
+</main>
+{{!-- </body> --}}

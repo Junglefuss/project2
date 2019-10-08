@@ -68,7 +68,7 @@ input {
   flex: 1;
 }
 
-.profile {
-  /* display: flex;
-  flex-flow: row wrap; */
+.profile > h2 {
+  text-align: right;
+  font-size: 32px;
 }
