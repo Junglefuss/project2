@@ -14,11 +14,9 @@ router.post('/', (req, res) => {
 });
 
 router.get('/id/:id', (req, res) => {
-  Worker.findOne({ _id: req.params.id }, req.body, { new: true })
-    // .then(worker => res.json(worker))
-    .then(worker => {
-      res.render('profile', { worker });
-    });
+  Worker.findOne({ _id: req.params.id }, req.body, { new: true }).then(worker => {
+    res.render('profile', { worker });
+  });
 });
 
 router.get('/edit/:id', (req, res) => {
