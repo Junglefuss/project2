@@ -14,6 +14,8 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 app.use(methodOverride('_method'));
 app.use(cors());
+mongoose.set('useFindAndModify', false);
+
 app.use('/', workerController);
 app.use(express.static('images'));
 app.use(express.static('public'));
@@ -22,5 +24,8 @@ app.use(express.static('public'));
 app.set('view engine', 'hbs');
 app.set('views', 'public/views');
 app.set('images', 'public/images');
+app.set('port', process.env.PORT || 8080);
 
-app.listen(3000, () => console.log('{{{{{  INDEX.JS FILE IS RUNNING }}}}}'));
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`);
+});
