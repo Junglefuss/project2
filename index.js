@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const parser = require('body-parser');
 const methodOverride = require('method-override');
+const parser = require('body-parser');
 const cors = require('cors');
 // const publicPath = path.resolve('./public', 'public');
 

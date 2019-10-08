@@ -13,7 +13,10 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   Worker.create(req.body).then(worker => {
-    res.redirect(`/id/${res.body._id}`);
+    // res.json(worker).then(worker => {
+    // console.log(res.body);
+    res.redirect(`/id/${worker.id}`);
+    // });
   });
 });
 
@@ -23,6 +26,18 @@ router.get('/id/:id', (req, res) => {
     .then(worker => {
       res.render('profile', { worker });
     });
+});
+
+router.get('/edit/:id', (req, res) => {
+  Worker.findOne({ _id: req.params.id }, req.body, { new: true }).then(worker => {
+    res.render('edit', { worker });
+  });
+});
+
+router.put('/edit/:id', (req, res) => {
+  Worker.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }).then(worker => {
+    res.render('profile', { worker });
+  });
 });
 
 // router.get('/name/:name', (req, res) => {

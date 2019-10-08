@@ -8,13 +8,32 @@
 
         <a class="nav" href=" https://www.coproductions.com/">Home</a>
         <a class="nav" href="https://www.coproductions.com/start-your-project/">Start Your Project</a>
-        <a class="nav" href="#">Sign Up</a>
+        <a class="nav" href="/">Sign Up</a>
         <a class="nav" href="https://www.coproductions.com/about/">About</a>
         <a class="nav" href="https://www.coproductions.com/faq/">FAQ</a>
         <a class="nav" href="https://www.coproductions.com/contact-us/">Contact Us</a>
 
     </div>
-    <main>
+    <main class="profile">
+        <h2> {{worker.firstName}} {{worker.lastName}} </h2>
+
+        <p>Link to a profile photo: {{worker.photo}}</p>
+        <p>Member Since: {{worker.signUpDate}}</p>
+        <p>The skills you reported: {{worker.skillsReported}}</p>
+        <p>Years of experience with those skills: {{worker.yearsExperienceAsOfSignUp}}</p>
+        <p>Skills complementary to your own: {{worker.complementarySkills}}</p>
+        <p>Referred to Coproductions by: {{worker.connections.referredBy}}</p>
+        <p>{{worker.connections.recommended}}</p>
+        <p>Your email address(s): {{worker.contactInfo.email}}</p>
+        <p>Your phone number(s): {{worker.contactInfo.phoneNum}}</p>
+        <p>Your mailing address: {{worker.contactInfo.streetAddress}}</br>
+            {{worker.contactInfo.city}}, {{worker.contactInfo.state}} {{worker.contactInfo.zip}}</p>
+        <p>Your current availability: {{worker.availability}}</p>
+        <p>Your typical hourly rate: {{worker.hourlyRate}}</p>
+        <p>Your LinkedIn profile: {{worker.urls.linkedIn}}</p>
+        <p>Your portfolio website: {{worker.urls.portfolio}}</p>
+        <p>Other public websites to share: {{worker.urls.other}}</p>
+        <a href="../edit/{{worker._id}}" type="submit">Edit</button>
 
     </main>
 </body>

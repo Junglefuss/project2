@@ -16,47 +16,21 @@
     </div>
     <main>
         <div class="intro">
-            <h1>Sign Up</h1>
+            <h1>Edit Your Profile</h1>
             <p>
-                If you’re an accomplished marketing professional that wants more business, sign up below to become part
-                of
-                the Coproductions network. Whether you’re part of a small firm or a freelancer, we’ll confirm your
-                experience
-                and then send project opportunities that match your skills. And if you’re looking for teammates, we can
-                help
-                with that too.</p>
+                You can adjust the information in your profile by making your changes in the fields below and clicking
+                "Update."</p>
         </div>
-        <div class="columns">
-            <div class="column">
-                <h4>NO UP-FRONT COST</h4>
-                Some sites charge workers or firms up-front to participate. But we at Coproductions don’t think the
-                clients
-                should be the ones paying to find you.
-            </div>
 
-            <div class="column">
-                <h4>NO OBLIGATION</h4>
-                Signing up for the network doesn’t mean you surrender any control over how you’d like to work or with
-                whom.
-                It just means you’ll find out about projects, and you decide which to pursue.
-            </div>
-
-            <div class="column">
-                <h4>YOU SET YOUR OWN RATES</h4>
-                We’ll tell you the client’s budget, but what you bid for a project is up to you. You know what your time
-                is
-                worth, and clients are still saving over agency rates, so charge what is fair.
-            </div>
-        </div>
         <div class="form container">
 
-            <form action="/" method="POST" accept-charset="utf-8">
+            <form action="/edit/{{worker.id}}?_method=put" method="POST" accept-charset="utf-8">
                 <div>
                     <label for="firstName">First Name:</label>
-                    <input type="text" name="firstName">
+                    <input type="text" name="firstName" value="{{worker.firstName}}">
 
                     <label for="lastName">Last Name:</label>
-                    <input type="text" name="lastName">
+                    <input type="text" name="lastName" value="{{worker.lastName}}">
                 </div>
                 <div>
                     <label for="photo">Profile photo (link):</label>
@@ -64,66 +38,66 @@
                 </div>
                 <div>
                     <label for="skillsReported">Your professional skills:</label>
-                    <input type="text" name="skillsReported">
+                    <input type="text" name="skillsReported" value="{{worker.skillsReported}}">
                 </div>
                 <div>
-                    <label for="yearsExperience">Years of experience:</label>
-                    <input type="number" name="yearsExperience">
+                    <label for="yearsExperienceAsOfSignUp">Years of experience:</label>
+                    <input type="number" name="yearsExperienceAsOfSignUp" value="{{worker.yearsExperienceAsOfSignUp}}">
                 </div>
                 <div>
                     <label for="complementarySkills">Professional skills that complement your own:</label>
-                    <input type="text" name="complementarySkills">
+                    <input type="text" name="complementarySkills" value="{{worker.complementarySkills}}">
                 </div>
                 <div>
                     <label for="connections.referredBy">Who referred you to Coproductions?:</label>
-                    <input type="text" name="connections.referredBy">
+                    <input type="text" name="connections.referredBy" value="{{worker.connections.referredBy}}">
                 </div>
                 <div>
                     <label for="connections.recommended">Can you recommend other agencies or freelancers you would work
                         with?:</label>
-                    <input type="text" name="connections.recommended">
+                    <input type="text" name="connections.recommended" value="{{worker.connections.recommended}}">
                 </div>
                 <div>
                     <label for="contactInfo.email">Your Email(s):</label>
-                    <input type="text" name="contactInfo.email">
+                    <input type="text" name="contactInfo.email" value="{{worker.contactInfo.email}}">
 
                     <label for="contactInfo.phoneNum">Your Phone Number(s):</label>
-                    <input type="text" name="contactInfo.phoneNum">
+                    <input type="text" name="contactInfo.phoneNum" value="{{worker.contactInfo.phoneNum}}">
                 </div>
                 <div>
                     <label for="contactInfo.streetAddress">Your Street Address (mailing):</label>
-                    <input type="text" name="contactInfo.streetAddress">
+                    <input type="text" name="contactInfo.streetAddress" value="{{worker.contactInfo.streetAddress}}">
 
                     <label for="contactInfo.city">Your City:</label>
-                    <input type="text" name="contactInfo.city">
+                    <input type="text" name="contactInfo.city" value="{{worker.contactInfo.city}}">
 
                     <label for="contactInfo.state">Your State:</label>
-                    <input type="text" name="contactInfo.state">
+                    <input type="text" name="contactInfo.state" value="{{worker.contactInfo.state}}">
 
                     <label for="contactInfo.zip">Your Zip:</label>
-                    <input type="text" name="contactInfo.zip">
+                    <input type="text" name="contactInfo.zip" value="{{worker.contactInfo.zip}}">
                 </div>
                 <div>
                     <label for="availability">Your Availability:</label>
-                    <input type="text" name="availability">
+                    <input type="text" name="availability" value="{{worker.availability}}">
 
                     <label for="hourlyRate">Your standard hourly rate:</label>
-                    <input type="text" name="hourlyRate">
+                    <input type="text" name="hourlyRate" value="{{worker.hourlyRate}}">
                 </div>
                 <div>
                     <label for="urls.linkedIn">Your LinkedIn profile link:</label>
-                    <input type="text" name="urls.linkedIn">
+                    <input type="text" name="urls.linkedIn" value="{{worker.urls.linkedIn}}">
                 </div>
                 <div>
                     <label for="urls.portfolio">Your portfolio link:</label>
-                    <input type="text" name="urls.portfolio">
+                    <input type="text" name="urls.portfolio" value="{{worker.urls.portfolio}}">
                 </div>
                 <div>
                     <label for="urls.other">Any other links demonstrating your skills or experience:</label>
-                    <input type="text" name="urls.other">
+                    <input type="text" name="urls.other" value="{{worker.urls.other}}">
                 </div>
 
-                <input type="submit" value="Save & Submit">
+                <input type="submit" value="Update">
             </form>
         </div>
 

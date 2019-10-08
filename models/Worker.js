@@ -1,20 +1,23 @@
 const mongoose = require('../db/connection');
 
 const WorkerSchema = mongoose.Schema({
+  created: { type: Date, required: true, default: Date.now },
   signUpDate: Date,
   firstName: String,
   lastName: String,
   photo: String,
   approvedFor: [],
   skillsReported: [],
-  yearsExperience: Number,
+  yearsExperienceAsOfSignUp: Number,
   complementarySkills: [],
   connections: {
     referredBy: String,
     recommendedBy: [],
     recommended: [],
-    bidWith: [],
-    companies: []
+    clientsRepresented: [],
+    bidsRequested: [],
+    projectsBidOn: [],
+    projectsWorkedOn: []
   },
   contactInfo: {
     email: [],
@@ -22,8 +25,8 @@ const WorkerSchema = mongoose.Schema({
     streetAddress: String,
     city: String,
     state: String,
-    country: String,
-    zip: Number
+    zip: Number,
+    country: String
   },
   availability: String,
   hourlyRate: Number,
