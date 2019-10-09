@@ -1,14 +1,16 @@
 <div class="header">
-    <a href="http://coproductions.com>">
+    <a href="https://coproductions.com">
         <img src="../images/coproductions_logo.png" alt="Coproductions logo" />
     </a>
 
-    <a class="nav" href=" https://www.coproductions.com/">Home</a>
-    <a class="nav" href="https://www.coproductions.com/start-your-project/">Start Your Project</a>
-    <a class="nav" href="/">Sign Up</a>
-    <a class="nav" href="https://www.coproductions.com/about/">About</a>
-    <a class="nav" href="https://www.coproductions.com/faq/">FAQ</a>
-    <a class="nav" href="https://www.coproductions.com/contact-us/">Contact Us</a>
+    <div class="navcontainer">
+        <a class="navitem" href="https://www.coproductions.com">Home</a>
+        <a class="navitem" href="https://www.coproductions.com/start-your-project/">Start Your Project</a>
+        <a class="navitem" id="active" href="/">Sign Up</a>
+        <a class="navitem" href="https://www.coproductions.com/about/">About</a>
+        <a class="navitem" href="https://www.coproductions.com/faq/">FAQ</a>
+        <a class="navitem" href="https://www.coproductions.com/contact-us/">Contact Us</a>
+    </div>
 
 </div>
 <main>
@@ -48,79 +50,104 @@
     <div class="form container">
 
         <form action="/" method="POST" accept-charset="utf-8">
-            <div>
-                <label for="firstName">First Name:</label>
-                <input type="text" name="firstName" id="firstName">
+            <ul class="flex-container-index">
+                <li class="form_row" class="form_row">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName">
 
-                <label for="lastName">Last Name:</label>
-                <input type="text" name="lastName" id="lastName">
-            </div>
-            <div>
-                <label for="photo">Profile photo (link):</label>
-                <input type="text" name="photo" id="photo">
-            </div>
-            <div>
-                <label for="skillsReported">Your professional skills:</label>
-                <input type="text" name="skillsReported" id="skillsReported">
-            </div>
-            <div>
-                <label for="yearsExperience">Years of experience:</label>
-                <input type="number" name="yearsExperience" id="yearsExperience">
-            </div>
-            <div>
-                <label for="complementarySkills">Professional skills that complement your own:</label>
-                <input type="text" name="complementarySkills" id="complementarySkills">
-            </div>
-            <div>
-                <label for="connections.referredBy">Who referred you to Coproductions?:</label>
-                <input type="text" name="connections.referredBy" id="connections.referredBy">
-            </div>
-            <div>
-                <label for="connections.recommended">Can you recommend other agencies or freelancers you would work
-                    with?:</label>
-                <input type="text" name="connections.recommended" id="connections.recommended">
-            </div>
-            <div>
-                <label for="contactInfo.email">Your Email(s):</label>
-                <input type="text" name="contactInfo.email" id="contactInfo.email">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName">
+                </li>
+                <li class="form_row">
+                    <label for="photo">Profile photo (link):</label>
+                    <input type="file" name="photo" id="photo">
+                </li>
+                <li class="form_row">
+                    <label for="skillsReported">Your professional skills:</label>
+                    <input type="text" name="skillsReported" id="skillsReported">
+                </li>
+                <li class="form_row">
+                    <label for="yearsExperience">Years of experience:</label>
+                    <input type="number" name="yearsExperience" id="yearsExperience">
+                </li>
+                <li class="form_row">
+                    <label for="complementarySkills">Professional skills that complement your own:</label>
+                    <input type="text" name="complementarySkills" id="complementarySkills">
+                </li>
+                <li class="form_row">
+                    <label for="connections.referredBy">Who referred you to Coproductions?:</label>
+                    <input type="text" name="connections.referredBy" id="connections.referredBy">
+                </li>
+                <li class="form_row">
+                    <label for="connections.recommended">Can you recommend other agencies or freelancers you would work
+                        with?:</label>
+                    <input type="text" name="connections.recommended" id="connections.recommended">
+                </li>
+                <li class="form_row">
+                    <label for="contactInfo.email">Your Email(s):</label>
+                    <input type="email" name="contactInfo.email" id="contactInfo.email">
 
-                <label for="contactInfo.phoneNum">Your Phone Number(s):</label>
-                <input type="text" name="ontactInfo.phoneNum" id="contactInfo.phoneNum">
-            </div>
-            <div>
-                <label for="contactInfo.streetAddress">Your Street Address (mailing):</label>
-                <input type="text" name="contactInfo.streetAddress" id="contactInfo.streetAddress">
+                    <label for="contactInfo.phoneNum">Your Phone Number(s):</label>
+                    <input type="text" name="ontactInfo.phoneNum" id="contactInfo.phoneNum">
+                </li>
+                <li class="form_row">
+                    <label for="contactInfo.streetAddress">Your Street Address (mailing):</label>
+                    <input type="text" name="contactInfo.streetAddress" id="contactInfo.streetAddress">
 
-                <label for="contactInfo.city">Your City:</label>
-                <input type="text" name="contactInfo.city" id="contactInfo.city">
+                    <label for="contactInfo.city">Your City:</label>
+                    <input type="text" name="contactInfo.city" id="contactInfo.city">
 
-                <label for="contactInfo.state">Your State:</label>
-                <input type="text" name="contactInfo.state" id="contactInfo.state">
+                    <label for="contactInfo.state">Your State:</label>
+                    <input type="text" name="contactInfo.state" id="contactInfo.state">
 
-                <label for="contactInfo.zip">Your Zip:</label>
-                <input type="text" name="contactInfo.zip" id="contactInfo.zip">
-            </div>
-            <div>
-                <label for="availability">Your Availability:</label>
-                <input type="text" name="availability" id="availability">
+                    <label for="contactInfo.zip">Your Zip:</label>
+                    <input type="text" name="contactInfo.zip" id="contactInfo.zip">
+                </li>
+                <li>
+                    <p>Your Availability</p>
+                    <ul class="flex-inner">
+                        <li class="form_row">
+                            <input type="radio" name="availability" id="availability">
+                            <label for="availability">Full-time, regular hours (weekdays)</label>
+                        </li>
+                        <li class="form_row">
+                            <input type="radio" name="availability" id="availability">
+                            <label for="availability">Full-time, irregular hours (nights & weekends)</label>
+                        </li>
+                        <li class="form_row">
+                            <input type="radio" name="availability" id="availability">
+                            <label for="availability">Part-time, consistent</label>
+                        </li>
+                        <li class="form_row">
+                            <input type="radio" name="availability" id="availability">
+                            <label for="availability">Part-time, inconsistent</label>
+                        </li>
+                        <li class="form_row">
+                            <input type="radio" name="availability" id="availability">
+                            <label for="availability">Not available right now</label>
+                        </li>
+                    </ul>
+                    {{!-- <label for="availability">Your Availability:</label>
+                    <input type="text" name="availability" id="availability"> --}}
+                <li class="form_row">
+                    <label for="hourlyRate">Your standard hourly rate:</label>
+                    <input type="text" name="hourlyRate" id="hourlyRate">
+                </li>
+                <li class="form_row">
+                    <label for="urls.linkedIn">Your LinkedIn profile link:</label>
+                    <input type="text" name="urls.linkedIn" id="urls.linkedIn">
+                </li>
+                <li class="form_row">
+                    <label for="urls.portfolio">Your portfolio link:</label>
+                    <input type="text" name="urls.portfolio" id="urls.portfolio">
+                </li>
+                <li class="form_row">
+                    <label for="urls.other">Any other links demonstrating your skills or experience:</label>
+                    <input type="text" name="urls.other" id="urls.other">
+                </li>
 
-                <label for="hourlyRate">Your standard hourly rate:</label>
-                <input type="text" name="hourlyRate" id="hourlyRate">
-            </div>
-            <div>
-                <label for="urls.linkedIn">Your LinkedIn profile link:</label>
-                <input type="text" name="urls.linkedIn" id="urls.linkedIn">
-            </div>
-            <div>
-                <label for="urls.portfolio">Your portfolio link:</label>
-                <input type="text" name="urls.portfolio" id="urls.portfolio">
-            </div>
-            <div>
-                <label for="urls.other">Any other links demonstrating your skills or experience:</label>
-                <input type="text" name="urls.other" id="urls.other">
-            </div>
-
-            <input type="submit" value="Save & Submit">
+                <input class="button" type="submit" value="Save & Submit">
+            </ul>
         </form>
     </div>
 

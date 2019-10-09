@@ -1,19 +1,29 @@
+/* HEADER ////////////////////////////////// */
 body {
   font-family: 'Work Sans', sans-serif;
 }
 
 .header {
-  display: flex;
   align-items: center;
+  min-height: 70px;
 }
 
 .header > a > img {
-  width: 225px;
-  align-content: flex-start;
+  width: 250px;
+  float: left;
+  /* justify-content: flex-start; */
 }
 
-.header > .nav {
-  justify-content: right;
+.header > .navcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 15px 0 0 0;
+  /* add media query for max-width: 775px */
+}
+
+.navitem {
+  /* flex: 1; */
   padding: 12px;
   text-decoration: none;
   font-size: 14px;
@@ -22,14 +32,22 @@ body {
   color: rgb(69, 191, 180);
 }
 
+.navitem:hover,
+#active {
+  color: rgb(125, 127, 128);
+}
+
+/* PAGE  ////////////////////////////////// */
+
 main {
   align-content: center;
   margin: 0 20px 0 20px;
   color: rgb(125, 127, 128);
 }
 
+/* PAGE INTRO CONTENT ////////////////////////////////// */
 .intro {
-  width: 100%;
+  width: 90%;
   margin: 0 0 -10px 0;
 }
 
@@ -38,27 +56,56 @@ main {
   margin: 0 0 20px 0;
 }
 
-.columns > .column {
+.columns .column {
   padding: 0 5px 0 5px;
-  width: 30%;
+  width: 28%;
 }
 
+/* FORM /////////////////////////////////////////////// */
 .container {
-  display: block;
   display: flex;
   flex-flow: row wrap;
   background-color: rgba(125, 127, 128, 0.5);
   padding: 10px;
   border-radius: 5px;
   max-width: 90%;
+  /* align-items: center; */
 }
 
-input {
-  height: 20px;
+.form_row {
+  height: 30px;
   margin: 5px 3px 5px 3px;
-  flex: 1;
+  width: 90%;
+  display: inline-block;
+  padding: 0 100px 0 0;
+  /* background-color: blue; */
 }
 
+.form_row > input {
+  /* background-color: blue; */
+  padding: 0 100px 0 0;
+  height: 20px;
+  /* flex: 1 0 320px; */
+  /* width: 40%; */
+}
+
+.flex-inner {
+  list-style: none;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: rgb(69, 191, 180);
+  border: 1px solid rgba(125, 127, 128, 0.5);
+  border-radius: 5%;
+  /* justify-content: flex-end; */
+}
+
+.button:hover {
+  background-color: rgb(125, 127, 128);
+}
+
+/* PROFILE PAGE ONLY */
 .profile > h2 {
   text-align: right;
   font-size: 32px;
