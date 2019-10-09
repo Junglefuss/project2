@@ -14,21 +14,27 @@ router.post('/', (req, res) => {
 });
 
 router.get('/id/:id', (req, res) => {
-  Worker.findOne({ _id: req.params.id }, req.body, { new: true }).then(worker => {
-    res.render('profile', { worker });
-  });
+  Worker.findOne({ _id: req.params.id }, req.body, { new: true }).then(
+    worker => {
+      res.render('profile', { worker });
+    }
+  );
 });
 
 router.get('/edit/:id', (req, res) => {
-  Worker.findOne({ _id: req.params.id }, req.body, { new: true }).then(worker => {
-    res.render('edit', { worker });
-  });
+  Worker.findOne({ _id: req.params.id }, req.body, { new: true }).then(
+    worker => {
+      res.render('edit', { worker });
+    }
+  );
 });
 
 router.put('/edit/:id', (req, res) => {
-  Worker.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }).then(worker => {
-    res.render('profile', { worker });
-  });
+  Worker.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }).then(
+    worker => {
+      res.render('profile', { worker });
+    }
+  );
 });
 
 router.get('/delete/:id', (req, res) => {
